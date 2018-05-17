@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--loading layout style reference-->
+    <attr name="styleLoadingLayout" format="reference" />
+
+    <declare-styleable name="LoadingLayout">
+        <attr name="error_text" format="string" />
+        <attr name="error_image" format="reference" />
+        <attr name="empty_text" format="string" />
+        <attr name="empty_image" format="reference" />
+        <attr name="loading_text" format="string" />
+        <attr name="loading_drawable" format="reference" />
+        <attr name="text_size" format="dimension" />
+        <attr name="text_color" format="color"/>
+    </declare-styleable>
+
+</resources>
