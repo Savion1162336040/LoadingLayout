@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".AutoLoadLayoutActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,27 +43,14 @@
             android:background="?android:attr/selectableItemBackground"
             android:onClick="content"
             android:text="content" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:onClick="toAuto"
-            android:background="?android:attr/selectableItemBackground"
-            android:text="toAuto"/>
 
     </LinearLayout>
 
-    <com.savion.loadinglayout.LoadingLayout
-        android:id="@+id/loadinglayout"
+    <TextView
+        android:id="@+id/contet"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Hello World!" />
-    </com.savion.loadinglayout.LoadingLayout>
-
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="this is content" />
 
 </LinearLayout>
