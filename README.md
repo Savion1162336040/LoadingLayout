@@ -6,9 +6,9 @@ LoadingLayout
 #### 简介
 
 简单的页面多种状态展示，支持空页面，错误页面，加载中页面
-[loading](img/loading.png)
-[empty](/img/empty.png)
-[error](/img/error.png)
+[loading](https://github.com/Savion1162336040/LoadingLayout/img/loading.png)
+[empty](https://github.com/Savion1162336040/LoadingLayout/img/empty.png)
+[error](https://github.com/Savion1162336040/LoadingLayout/img/error.png)
 
 #### 使用
 
