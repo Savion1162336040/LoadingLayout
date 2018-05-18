@@ -6,8 +6,11 @@ LoadingLayout
 #### 简介
 
 简单的页面多种状态展示，支持空页面，错误页面，加载中页面
+
 ![loading](https://github.com/Savion1162336040/LoadingLayout/blob/master/img/loading.png)
+
 ![empty](https://github.com/Savion1162336040/LoadingLayout/blob/master/img/empty.png)
+
 ![error](https://github.com/Savion1162336040/LoadingLayout/blob/master/img/error.png)
 
 #### 使用
