@@ -208,9 +208,9 @@ public class LoadingLayout extends FrameLayout {
         if (_viewMaps.containsKey(layout)) {
             return _viewMaps.get(layout);
         }
-        //inflate(æŒ‡å®šéœ€è¦æ·»åŠ çš„layoutID,root,attachToRoot)
-        //rootè¡¨ç¤ºéœ€è¦æ·»åŠ åˆ°å“ªä¸ªçš„æ ¹å¸ƒå±€ï¼ˆè¿™é‡ŒæŒ‡å®šrootçš„ä½œç”¨æ˜¯ä½¿layoutIDçš„æ ¹å…ƒç´ å±æ€§èƒ½ç”Ÿæ•ˆï¼Œæ¯”å¦‚layoutçš„width,heightç­‰å±æ€§æ˜¯éœ€è¦æœ‰parentLayoutæ‰èƒ½ç”Ÿæ•ˆçš„ï¼Œå¦‚æœæ­¤å¤„æ²¡æœ‰æŒ‡å®šinflateçš„rootçš„è¯ï¼Œé‚£ä¹ˆlayoutIDçš„æ ¹å¸ƒå±€å±æ€§ä¹Ÿå°±ä¸ä¼šç”Ÿæ•ˆï¼‰
-        //attachToRootè¡¨ç¤ºæ˜¯å¦ç«‹å³æ·»åŠ åˆ°rootä¸Šï¼Œfalseçš„è¯å°±éœ€è¦æ‰‹åŠ¨addViewæ·»åŠ ï¼Œtrueå°±ä¼šç«‹å³æ·»åŠ åˆ°rootä¸Š
+        //inflate(Ö¸¶¨ĞèÒªÌí¼ÓµÄlayoutID,root,attachToRoot)
+        //root±íÊ¾ĞèÒªÌí¼Óµ½ÄÄ¸öµÄ¸ù²¼¾Ö£¨ÕâÀïÖ¸¶¨rootµÄ×÷ÓÃÊÇÊ¹layoutIDµÄ¸ùÔªËØÊôĞÔÄÜÉúĞ§£¬±ÈÈçlayoutµÄwidth,heightµÈÊôĞÔÊÇĞèÒªÓĞparentLayout²ÅÄÜÉúĞ§µÄ£¬Èç¹û´Ë´¦Ã»ÓĞÖ¸¶¨inflateµÄrootµÄ»°£¬ÄÇÃ´layoutIDµÄ¸ù²¼¾ÖÊôĞÔÒ²¾Í²»»áÉúĞ§£©
+        //attachToRoot±íÊ¾ÊÇ·ñÁ¢¼´Ìí¼Óµ½rootÉÏ£¬falseµÄ»°¾ÍĞèÒªÊÖ¶¯addViewÌí¼Ó£¬true¾Í»áÁ¢¼´Ìí¼Óµ½rootÉÏ
         View view = _layoutInflater.inflate(layout, this, false);
         view.setVisibility(View.GONE);
         addView(view);

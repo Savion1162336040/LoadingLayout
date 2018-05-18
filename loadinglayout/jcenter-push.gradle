@@ -1,81 +1,14 @@
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.novoda.bintray-release'//添加
 
 def siteUrl = 'https://github.com/Savion1162336040/LoadingLayout'
 def gitUrl = 'https://github.com/Savion1162336040/LoadingLayout.git'
 
-group = 'com.savion'
-version = '1.0'
-install {
-    repositories.mavenInstaller {
-        pom {
-            project {
-                packaging 'aar'
-                name 'custom progressbar for android'
-                url siteUrl
-
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-
-                developers {
-                    developer {
-                        id 'czh'
-                        name 'ZHANG.Hao'
-                        email '809026704@qq.com'
-                    }
-                }
-
-                scm {
-                    connection gitUrl
-                    developerConnection gitUrl
-                    url siteUrl
-                }
-            }
-
-        }
-    }
-}
-
-task androidJavadocs(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
-    classifier = 'javadoc'
-    from androidJavadocs.destinationDir
-}
-
-task androidSourcesJar(type: Jar) {
-    classifier = 'sources'
-    from android.sourceSets.main.java.srcDirs
-}
-
-artifacts {
-    archives androidSourcesJar
-    archives androidJavadocsJar
-}
-
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
-    configurations = ['archives']
-    pkg {
-        version {
-            name = '0.0.1'
-            desc = 'custom progress bar 0.0.1'
-        }
-        repo = 'maven'
-        name = 'custom-progressbar'
-        licenses = ['Apache-2.0']
-        vcsUrl = gitUrl
-        publish = true
-    }
+//添加
+publish {
+    userOrg = 'savion1162336040'//bintray.com用户名
+    groupId = 'com.savion'//jcenter上的路径
+    artifactId = 'LoadingLayout'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'description for LoadingLayout'//描述，不重要
+    website = siteUrl//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }

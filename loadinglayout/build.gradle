@@ -1,16 +1,11 @@
 apply plugin: 'com.android.library'
-apply from:'./jcenter-push.gradle'
 android {
     compileSdkVersion 27
-
-
-
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
-
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -30,3 +25,4 @@ dependencies {
     implementation rootProject.ext.dependencies['appcompat-v7']
     implementation rootProject.ext.dependencies['support-v4']
 }
+apply from:'./jcenter-push.gradle'
